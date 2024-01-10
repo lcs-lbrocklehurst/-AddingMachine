@@ -17,6 +17,8 @@ struct QuizView: View {
     // List of prior questions
     @State var history: [Question] = [] // Empty to start
     
+    // Keep track of filtering option user has selected
+    @State var filteringOption: AnswerState = .noInputGiven // Everything
     // MARK: Computed properties
     var body: some View {
         HStack {
@@ -71,11 +73,25 @@ struct QuizView: View {
             
             
             // List of past questions
-            List(
-                filtering(providedHistory: history, on: .correct)
-            ) { currentQuestion in
-                HStack {
-                    Text("\(currentQuestion.firstNumber) + \(currentQuestion.secondNumber) = \(currentQuestion.answerGiven) (\(currentQuestion.firstNumber + currentQuestion.secondNumber)) \(currentQuestion.result.rawValue)")
+            VStack {
+                
+                // Picker to select the fitlering type
+                Picker("Filtering on...", selection: $filteringOption) {
+                    Text("nothing (show all questions)")
+                        .tag(AnswerState.noInputGiven)
+                    Text("correct")
+                        .tag(AnswerState.correct)
+                    Text("incorrect")
+                        .tag(AnswerState.incorrect)
+                }
+                
+                // The list of questions
+                List(
+                    filtering(providedHistory: history, on: filteringOption)
+                ) { currentQuestion in
+                    HStack {
+                        Text("\(currentQuestion.firstNumber) + \(currentQuestion.secondNumber) = \(currentQuestion.answerGiven) (\(currentQuestion.firstNumber + currentQuestion.secondNumber)) \(currentQuestion.result.rawValue)")
+                    }
                 }
             }
         }
