@@ -30,7 +30,7 @@ struct QuizView: View {
                     Spacer()
                     
                     Text("\(secondNumber)")
-                        
+                    
                 }
                 .font(.custom("Helvetica", size: 96.0))
                 
@@ -41,11 +41,12 @@ struct QuizView: View {
                         .padding(20)
                     
                     TextField("Answer", text: $answerGiven)
-                      
+                    
                         .multilineTextAlignment(.trailing)
                         .padding(.leading)
                 }
                 .font(.custom("Helvetica", size: 96.0))
+                
                 HStack {
                     Spacer()
                     
@@ -53,7 +54,14 @@ struct QuizView: View {
                         checkAnswer()
                     }, label: {
                         Text("Submit")
-                })
+                    })
+                    
+                    Button(action: {
+                        newQuestion()
+                    }, label: {
+                        Text("New Question")
+                    })
+                    
                 }
             }
             
@@ -69,7 +77,7 @@ struct QuizView: View {
         let correctAnswer = firstNumber + secondNumber
         
         // Try to make the answer given into an integer
-        guard let answerGivenAsInteger = Int(answerGiven) 
+        guard let answerGivenAsInteger = Int(answerGiven)
         else {
             // Can't make input ino an integer
             return
@@ -81,6 +89,14 @@ struct QuizView: View {
         } else {
             result = .incorrect
         }
+    }
+    
+    func newQuestion() {
+         firstNumber = Int.random(in: 1...25)
+         secondNumber = Int.random(in: 1...25)
+         answerGiven = ""
+         result = .noInputGiven
+
     }
 }
 
