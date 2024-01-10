@@ -71,7 +71,9 @@ struct QuizView: View {
             
             
             // List of past questions
-            List(history) { currentQuestion in
+            List(
+                filtering(providedHistory: history, on: .correct)
+            ) { currentQuestion in
                 HStack {
                     Text("\(currentQuestion.firstNumber) + \(currentQuestion.secondNumber) = \(currentQuestion.answerGiven) (\(currentQuestion.firstNumber + currentQuestion.secondNumber)) \(currentQuestion.result.rawValue)")
                 }

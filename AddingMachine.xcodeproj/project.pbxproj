@@ -13,6 +13,7 @@
 		474841912B4F197F00A62CBB /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474841902B4F197F00A62CBB /* QuizView.swift */; };
 		474841932B4F20AA00A62CBB /* AnswerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474841922B4F20AA00A62CBB /* AnswerState.swift */; };
 		474841952B4F252800A62CBB /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474841942B4F252800A62CBB /* Question.swift */; };
+		474841992B4F2A0400A62CBB /* SharedFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474841982B4F2A0400A62CBB /* SharedFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		474841902B4F197F00A62CBB /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		474841922B4F20AA00A62CBB /* AnswerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerState.swift; sourceTree = "<group>"; };
 		474841942B4F252800A62CBB /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		474841982B4F2A0400A62CBB /* SharedFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		4748417E2B4F18E500A62CBB /* AddingMachine */ = {
 			isa = PBXGroup;
 			children = (
+				474841972B4F29E600A62CBB /* Helpers */,
 				4748418F2B4F193400A62CBB /* Model */,
 				4748418E2B4F192600A62CBB /* Views */,
 				474841832B4F18E600A62CBB /* Assets.xcassets */,
@@ -89,6 +92,14 @@
 				474841942B4F252800A62CBB /* Question.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		474841972B4F29E600A62CBB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				474841982B4F2A0400A62CBB /* SharedFunctions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				474841932B4F20AA00A62CBB /* AnswerState.swift in Sources */,
+				474841992B4F2A0400A62CBB /* SharedFunctions.swift in Sources */,
 				474841952B4F252800A62CBB /* Question.swift in Sources */,
 				474841802B4F18E500A62CBB /* AddingMachineApp.swift in Sources */,
 				474841912B4F197F00A62CBB /* QuizView.swift in Sources */,
