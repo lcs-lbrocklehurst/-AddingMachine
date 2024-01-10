@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Question {
+struct Question: Identifiable {
+    let id = UUID()
     let firstNumber: Int
     let secondNumber: Int
     let answerGiven: String

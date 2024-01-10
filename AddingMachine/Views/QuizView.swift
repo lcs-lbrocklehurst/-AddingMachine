@@ -44,7 +44,7 @@ struct QuizView: View {
                     Text(result.rawValue)
                         .padding(20)
                     
-                    TextField("Answer", text: $answerGiven)
+                    TextField("", text: $answerGiven)
                     
                         .multilineTextAlignment(.trailing)
                         .padding(.leading)
@@ -71,7 +71,11 @@ struct QuizView: View {
             
             
             // List of past questions
-            Text("History")
+            List(history) { currentQuestion in
+                HStack {
+                    Text("\(currentQuestion.firstNumber) + \(currentQuestion.secondNumber) = \(currentQuestion.answerGiven) (\(currentQuestion.firstNumber + currentQuestion.secondNumber)) \(currentQuestion.result.rawValue)")
+                }
+            }
         }
         .frame(width: 800, height: 400)
     }
