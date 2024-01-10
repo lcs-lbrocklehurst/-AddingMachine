@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		474841802B4F18E500A62CBB /* AddingMachineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748417F2B4F18E500A62CBB /* AddingMachineApp.swift */; };
-		474841822B4F18E500A62CBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474841812B4F18E500A62CBB /* ContentView.swift */; };
 		474841842B4F18E600A62CBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 474841832B4F18E600A62CBB /* Assets.xcassets */; };
 		474841872B4F18E600A62CBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 474841862B4F18E600A62CBB /* Preview Assets.xcassets */; };
+		474841912B4F197F00A62CBB /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474841902B4F197F00A62CBB /* QuizView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4748417C2B4F18E500A62CBB /* AddingMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddingMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4748417F2B4F18E500A62CBB /* AddingMachineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingMachineApp.swift; sourceTree = "<group>"; };
-		474841812B4F18E500A62CBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		474841832B4F18E600A62CBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		474841862B4F18E600A62CBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		474841882B4F18E600A62CBB /* AddingMachine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AddingMachine.entitlements; sourceTree = "<group>"; };
+		474841902B4F197F00A62CBB /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +36,7 @@
 		474841732B4F18E500A62CBB = {
 			isa = PBXGroup;
 			children = (
+				4748417F2B4F18E500A62CBB /* AddingMachineApp.swift */,
 				4748417E2B4F18E500A62CBB /* AddingMachine */,
 				4748417D2B4F18E500A62CBB /* Products */,
 			);
@@ -52,8 +53,8 @@
 		4748417E2B4F18E500A62CBB /* AddingMachine */ = {
 			isa = PBXGroup;
 			children = (
-				4748417F2B4F18E500A62CBB /* AddingMachineApp.swift */,
-				474841812B4F18E500A62CBB /* ContentView.swift */,
+				4748418F2B4F193400A62CBB /* Model */,
+				4748418E2B4F192600A62CBB /* Views */,
 				474841832B4F18E600A62CBB /* Assets.xcassets */,
 				474841882B4F18E600A62CBB /* AddingMachine.entitlements */,
 				474841852B4F18E600A62CBB /* Preview Content */,
@@ -67,6 +68,21 @@
 				474841862B4F18E600A62CBB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4748418E2B4F192600A62CBB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				474841902B4F197F00A62CBB /* QuizView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4748418F2B4F193400A62CBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				474841822B4F18E500A62CBB /* ContentView.swift in Sources */,
 				474841802B4F18E500A62CBB /* AddingMachineApp.swift in Sources */,
+				474841912B4F197F00A62CBB /* QuizView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +291,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AddingMachine/Preview Content\"";
-				DEVELOPMENT_TEAM = 69F73CZKCZ;
+				DEVELOPMENT_TEAM = B3NSGRQYHM;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -302,7 +318,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AddingMachine/Preview Content\"";
-				DEVELOPMENT_TEAM = 69F73CZKCZ;
+				DEVELOPMENT_TEAM = B3NSGRQYHM;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -11,7 +11,7 @@ import SwiftUI
 struct AddingMachineApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            QuizView()
         }
     }
 }
