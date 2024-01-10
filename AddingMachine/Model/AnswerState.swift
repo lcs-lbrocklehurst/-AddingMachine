@@ -8,7 +8,7 @@
 import Foundation
 
 enum AnswerState: String {
-case noInputGiven = ""
+case noInputGiven = "   "
 case incorrect = "❌"
 case correct = "✅"
 }
