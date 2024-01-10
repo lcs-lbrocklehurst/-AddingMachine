@@ -13,6 +13,10 @@ struct QuizView: View {
     @State var secondNumber = Int.random(in: 1...25)
     @State var answerGiven = ""
     @State var result: AnswerState = .noInputGiven
+    
+    // List of prior questions
+    @State var history: [Question] = [] // Empty to start
+    
     // MARK: Computed properties
     var body: some View {
         HStack {
@@ -92,6 +96,19 @@ struct QuizView: View {
     }
     
     func newQuestion() {
+        
+        // Save the question just completed
+        let oldQuestion = Question(
+            firstNumber: firstNumber,
+            secondNumber: secondNumber,
+            answerGiven: answerGiven,
+            result: result
+        )
+        
+        
+        // Add it to the history
+        history.insert(oldQuestion, at: 0)
+        // Resets everything
          firstNumber = Int.random(in: 1...25)
          secondNumber = Int.random(in: 1...25)
          answerGiven = ""
